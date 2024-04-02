@@ -89,3 +89,8 @@ function displayJoke(joke) {
 }
 
 
+// Función para limpiar el texto mostrado
+function clearJoke() {
+    const jokeContainer = document.getElementById('jokeContainer');
+    jokeContainer.innerHTML = ''; // Limpiar el contenido del contenedor
+}
