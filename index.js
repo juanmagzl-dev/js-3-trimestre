@@ -61,27 +61,6 @@ function getCategoryJoke() {
     }
 }
 
-// function getTextJoke() {
-//     const text = document.getElementById('textInput').value;
-//     if (text) {
-//         const xhr = new XMLHttpRequest();
-//         xhr.onreadystatechange = function() {
-//             if (xhr.readyState === XMLHttpRequest.DONE) {
-//                 if (xhr.status === 200) {
-//                     const data = JSON.parse(xhr.responseText);
-//                     const randomIndex = Math.floor(Math.random() * data.result.length);
-//                     displayJoke(data.result[randomIndex].value);
-//                 } else {
-//                     console.error('Error fetching joke by text:', xhr.statusText);
-//                 }
-//             }
-//         };
-//         xhr.open('GET', `https://api.chucknorris.io/jokes/search?query=${text}`, true);
-//         xhr.send();
-//     } else {
-//         alert('Please enter some text');
-//     }
-// }
 
 function displayJoke(joke) {
     const jokeContainer = document.getElementById('jokeContainer');
