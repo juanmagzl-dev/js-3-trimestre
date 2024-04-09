@@ -32,7 +32,7 @@ function getRandomJoke() {
                 const data = JSON.parse(xhr.responseText);
                 displayJoke(data.value);
             } else {
-                console.error('Error fetching random joke:', xhr.statusText);
+                console.error('Error random joke:', xhr.statusText);
             }
         }
     };
@@ -50,14 +50,14 @@ function getCategoryJoke() {
                     const data = JSON.parse(xhr.responseText);
                     displayJoke(data.value);
                 } else {
-                    console.error(`Error fetching ${category} joke:`, xhr.statusText);
+                    console.error(`Error ${category} joke:`, xhr.statusText);
                 }
             }
         };
         xhr.open('GET', `https://api.chucknorris.io/jokes/random?category=${category}`, true);
         xhr.send();
     } else {
-        alert('Please select a category');
+        alert('Selecciona una categoria');
     }
 }
 
@@ -71,5 +71,5 @@ function displayJoke(joke) {
 // Función para limpiar el texto mostrado
 function clearJoke() {
     const jokeContainer = document.getElementById('jokeContainer');
-    jokeContainer.innerHTML = ''; // Limpiar el contenido del contenedor
+    jokeContainer.innerHTML = ''; 
 }
